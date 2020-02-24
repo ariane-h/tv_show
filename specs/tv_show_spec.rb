@@ -12,4 +12,16 @@ class TestTvShow < Minitest::Test
     assert_equal("The Walking Dead", @tvshow1.show_name)
   end
 
+  def test_get_network
+    assert_equal("AMC", @tvshow1.network)
+  end
+
+  def test_get_characters
+    assert_equal(["Carl","Rick","Shane"], @tvshow1.characters)
+  end
+
+  def test_get_run_time
+    assert_equal(40, @tvshow1.run_time)
+  end
+
 end
