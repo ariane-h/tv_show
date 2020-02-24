@@ -6,6 +6,9 @@ Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 class TestTvShow < Minitest::Test
   def setup()
     @tvshow1 = TvShow.new("The Walking Dead", "AMC", ["Carl","Rick","Shane"], 40)
+    @tvshow2 = TvShow.new("Friends", "NBC", ["Joey","Rachel","Chandler"], 30)
+    @tvshow3 = TvShow.new("Peep Show", "Channel 4", ["Mark","Jez","Dobby"], 30)
+
   end
 
   def test_get_show_name
@@ -42,6 +45,16 @@ class TestTvShow < Minitest::Test
   def test_add_character
     @tvshow1.characters = @tvshow1.add_character("Pippin")
     assert_equal(4, @tvshow1.characters.count)
+  end
+
+  def test_find_character
+    match = @tvshow2.find_character("Joey")
+    assert_equal(true, match)
+  end
+
+  def test_find_character_not_found
+    match = @tvshow2.find_character("Rick")
+    assert_equal(false, match)
   end
 
 end

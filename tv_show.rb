@@ -25,4 +25,8 @@ class TvShow
   characters.push(new_character)
   end
 
+  def find_character(name)
+    @characters.include? name
+  end
+
 end
