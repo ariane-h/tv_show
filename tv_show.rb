@@ -1,12 +1,13 @@
 class TvShow
 
-  attr_accessor :show_name, :network, :characters, :run_time
+  attr_accessor :show_name, :network, :characters, :run_time, :award
 
-  def initialize(show_name, network, characters, run_time)
+  def initialize(show_name, network, characters, run_time, award)
     @show_name = show_name
     @network = network
     @characters = characters
     @run_time = run_time
+    @award = award
   end
 
   def set_show_name(new_name)
@@ -28,5 +29,7 @@ class TvShow
   def find_character(name)
     @characters.include? name
   end
+
+
 
 end
