@@ -39,4 +39,9 @@ class TestTvShow < Minitest::Test
     assert_equal(60, @tvshow1.run_time)
   end
 
+  def test_add_character
+    @tvshow1.characters = @tvshow1.add_character("Pippin")
+    assert_equal(4, @tvshow1.characters.count)
+  end
+
 end

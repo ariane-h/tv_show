@@ -21,4 +21,8 @@ class TvShow
     @run_time = new_run_time
   end
 
+  def add_character(new_character)
+  characters.push(new_character)
+  end
+
 end
