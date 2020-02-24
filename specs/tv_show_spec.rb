@@ -57,9 +57,9 @@ class TestTvShow < Minitest::Test
     assert_equal(false, match)
   end
 
-  # def test_give_award
-  #
-  #   assert_equal(1, @tvshow2.award)
-  # end
+  def test_give_award
+    @tvshow2.give_award()
+    assert_equal(1, @tvshow2.award)
+  end
 
 end

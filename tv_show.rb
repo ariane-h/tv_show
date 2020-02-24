@@ -30,6 +30,8 @@ class TvShow
     @characters.include? name
   end
 
-
+  def give_award()
+    @award += 1 if @show_name == "Friends"
+  end
 
 end
