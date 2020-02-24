@@ -24,4 +24,19 @@ class TestTvShow < Minitest::Test
     assert_equal(40, @tvshow1.run_time)
   end
 
+  def test_set_show_name
+    @tvshow1.set_show_name("Friends")
+    assert_equal("Friends", @tvshow1.show_name)
+  end
+
+  def test_set_network
+    @tvshow1.set_network("Fox")
+    assert_equal("Fox", @tvshow1.network)
+  end
+
+  def test_set_run_time
+    @tvshow1.set_run_time(60)
+    assert_equal(60, @tvshow1.run_time)
+  end
+
 end
